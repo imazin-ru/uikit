@@ -7,12 +7,13 @@
     UI.component('dropdown', {
 
         defaults: {
-           'mode'       : 'hover',
-           'remaintime' : 800,
-           'justify'    : false,
-           'boundary'   : UI.$win,
-           'delay'      : 0,
-           'hoverDelayIdle'  : 250
+           'mode'           : 'hover',
+           'remaintime'     : 800,
+           'justify'        : false,
+           'boundary'       : UI.$win,
+           'delay'          : 0,
+           'dropdownClass'  : 'uk-dropdown',
+           'hoverDelayIdle' : 250
         },
 
         remainIdle: false,
@@ -34,7 +35,7 @@
                         dropdown.element.trigger(triggerevent);
                     }
 
-                    if (dropdown.element.find('.uk-dropdown').length) {
+                    if (dropdown.element.find('.'+dropdown.options.dropdownClass).length) {
                         e.preventDefault();
                     }
                 }
@@ -45,7 +46,7 @@
 
             var $this = this;
 
-            this.dropdown  = this.find('.uk-dropdown');
+            this.dropdown  = this.find('.'+this.options.dropdownClass);
 
             this.centered  = this.dropdown.hasClass('uk-dropdown-center');
             this.justified = this.options.justify ? UI.$(this.options.justify) : false;
@@ -67,7 +68,7 @@
 
                     var $target = UI.$(e.target);
 
-                    if (!$target.parents(".uk-dropdown").length) {
+                    if (!$target.parents('.'+$this.options.dropdownClass).length) {
 
                         if ($target.is("a[href='#']") || $target.parent().is("a[href='#']") || ($this.dropdown.length && !$this.dropdown.is(":visible")) ){
                             e.preventDefault();

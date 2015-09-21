@@ -72,6 +72,7 @@ var watchmode    = gutil.env._.length && gutil.env._[0] == 'watch',
         './src/js/core/modal.js',
         './src/js/core/nav.js',
         './src/js/core/offcanvas.js',
+        './src/js/core/popover.js',
         './src/js/core/switcher.js',
         './src/js/core/tab.js',
         './src/js/core/cover.js'
