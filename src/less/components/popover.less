@@ -35,9 +35,8 @@
  ========================================================================== */
 
 
-[data-uk-popover] {
-    position: relative;
-}
+[data-uk-popover] { position: relative; }
+a[data-uk-popover], span[data-uk-popover] { display: inline-block; }
 
 /*
  * 1. Hide by default
@@ -52,7 +51,6 @@
     display: none;
     /* 2 */
     position: absolute;
-    top: 100%;
     z-index: @popover-z-index;
     /* 3 */
     box-sizing: border-box;

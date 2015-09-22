@@ -33,13 +33,13 @@
 
                 if (!ele.data("dropdown")) {
 
-                    var dropdown = UI.dropdown(ele, UI.$.extend({}, UI.Utils.options(ele.attr("data-uk-popover"), {dropdownClass:'uk-popover'})));
+                    var dropdown = UI.dropdown(ele, UI.$.extend({}, UI.Utils.options(ele.attr("data-uk-popover")), {dropdownClass:'uk-popover'}));
 
                     if (triggerevent=="click" || (triggerevent=="mouseenter" && dropdown.options.mode=="hover")) {
                         dropdown.element.trigger(triggerevent);
                     }
 
-                    if (dropdown.element.find('.uk-dropdown').length) {
+                    if (dropdown.element.find('.uk-popover').length) {
                         e.preventDefault();
                     }
                 }
