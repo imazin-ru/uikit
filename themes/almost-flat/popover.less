@@ -1,0 +1,31 @@
+//
+// Component: Popover
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@popover-z-index:                              @global-z-index + 20;
+@popover-background:                           #fff;
+@popover-color:                                @global-color;
+@popover-divider-border:                       @global-border;
+
+
+//
+// New
+//
+
+@popover-border:                               @global-border;
+
+
+// Component
+// ========================================================================
+
+.hook-popover() {
+    border: 1px solid @popover-border;
+    border-radius: @global-border-radius;
+}
+
+.hook-popover-header() {}

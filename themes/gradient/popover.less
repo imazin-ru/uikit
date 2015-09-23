@@ -1,0 +1,41 @@
+//
+// Component: Popover
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@popover-z-index:                              @global-z-index + 20;
+@popover-background:                           #fff;
+@popover-color:                                @global-color;
+@popover-divider-border:                       @global-border;
+
+
+//
+// New
+//
+
+@popover-border:                               darken(@global-border, 7%);
+@popover-box-shadow:                           rgba(0,0,0,0.1);
+@popover-gradient-top:                         @global-default-gradient-top;
+@popover-gradient-bottom:                      @global-default-gradient-bottom;
+@popover-text-shadow:                          @global-text-shadow;
+
+
+// Component
+// ========================================================================
+
+.hook-popover() {
+    border: 1px solid @popover-border;
+    border-radius: @global-border-radius;
+    box-shadow: 0 2px 5px @popover-box-shadow;
+}
+
+.hook-popover-header() {
+    background-image: -webkit-linear-gradient(top, @popover-gradient-top, @popover-gradient-bottom);
+    background-image: linear-gradient(to bottom, @popover-gradient-top, @popover-gradient-bottom);
+    text-shadow: 0 1px 0 @popover-text-shadow;
+    border-radius: @global-border-radius @global-border-radius 0 0;
+}
