@@ -2,15 +2,10 @@
 // Description:     Defines styles for a toggleable popover
 //
 // Component:       `uk-popover`
-
-// Modifiers:
+//
+// Sub-objects:     `uk-popover-header`
 //
 // States:          `uk-open`
-//
-// Uses:            Animation
-//                  Grid: `uk-width-*`
-//                  Panel: `uk-panel`
-//                  Nav: `uk-nav`
 //
 // ========================================================================
 
@@ -30,7 +25,7 @@
 
 
 /* ========================================================================
-   Component: Dropdown
+   Component: Popover
  ========================================================================== */
 
 
@@ -80,6 +75,9 @@ a[data-uk-popover], span[data-uk-popover] { display: inline-block; }
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
+
+/* Sub-object `uk-popover-header`
+ ========================================================================== */
 
 .uk-popover-header {
     margin: -(@popover-padding)  -(@popover-padding)  round(@popover-padding/2)  -(@popover-padding);
