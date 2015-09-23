@@ -317,7 +317,6 @@
                 pp;
 
             pp = dpos.split('-');
-
             css = variants[dpos] ? variants[dpos] : variants['bottom'];
 
             // justify dropdown
@@ -328,15 +327,18 @@
                 switch(this.checkBoundary(pos.left + css.left, pos.top + css.top, width, height, boundarywidth)) {
 
                     case "x":
-                        css = variants[flips['x'][dpos] || 'right'];
+                        dpos = flips['x'][dpos] || 'right';
                         break;
                     case "y":
-                        css = variants[flips['y'][dpos] || 'top'];
+                        dpos = flips['y'][dpos] || 'top';
                         break;
                     case "xy":
-                        css = variants[flips['xy'][dpos] || 'right-top'];
+                        dpos = flips['xy'][dpos] || 'right-top';
                         break;
                 }
+
+                pp = dpos.split('-');
+                css = variants[dpos] ? variants[dpos] : variants['bottom'];
             }
 
             if (width > boundarywidth) {
